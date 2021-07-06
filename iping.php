@@ -5,10 +5,12 @@ class iping {
 
 	const maxTries    = 200;
 	const okIfWithinS =   3; // success if both 4 and 6 are successful within that many seconds
+	
+	const version = 'v0.2.2 - July 5, 2021, 10:37pm EDT / UTC -4';
 
 	public static function doit() { 
 		if (self::doitI10()) 
-			 echo("** BOTH OK ***\n");
+			 echo('** BOTH OK ***' . ' ' . self::version . "\n");
 		else die('gave up after ' . self::maxTries . "\n");
 	}
 
